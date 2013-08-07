@@ -1,6 +1,7 @@
 forge 'http://forge.puppetlabs.com/'
 
 mod 'puppetlabs/stdlib', '~> 3.0'
+mod 'rtyler/puppet'
 
 mod 'harden',
   :git => 'git://github.com/alphagov/puppet-harden.git',
