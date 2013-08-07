@@ -2,9 +2,8 @@
 # vi: set ft=ruby :
 
 nodes = {
-  'node0' => {:ip => '172.16.10.10', :memory => 512},
-  'node1' => {:ip => '172.16.10.11'},
-  'node2' => {:ip => '172.16.10.12'},
+  'mirror0' => {:ip => '172.16.12.10'},
+  'mirror1' => {:ip => '172.16.12.11'},
 }
 node_defaults = {
   :domain => 'internal',
