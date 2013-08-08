@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
       "--verbose", "--summarize",
       "--reports", "store",
       "--hiera_config", "/vagrant/hiera.yaml",
+      "--environment", "development",
     ]
   end
 
