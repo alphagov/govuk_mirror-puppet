@@ -1,9 +1,9 @@
 ---
 classes:
-  - puppet
   - fail2ban
-  - harden
   - gds_accounts
+  - harden
+  - puppet
   - ufw
 
 puppet::ensure: '3.2.3-1puppetlabs1'
