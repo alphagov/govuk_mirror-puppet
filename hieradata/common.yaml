@@ -4,6 +4,7 @@ classes:
   - gds_accounts
   - harden
   - puppet
+  - ssh::server
   - ufw
 
 puppet::ensure: '3.2.3-1puppetlabs1'
