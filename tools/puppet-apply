@@ -4,6 +4,7 @@ set -e
 PUPPET_PATH=/opt/puppet
 sudo puppet apply \
   --hiera_config ${PUPPET_PATH}/hiera.yaml \
+  --manifestdir ${PUPPET_PATH}/manifests \
   --modulepath ${PUPPET_PATH}/modules:${PUPPET_PATH}/vendor/modules \
   ${PUPPET_PATH}/manifests/site.pp \
   $@

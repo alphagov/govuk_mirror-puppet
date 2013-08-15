@@ -5,4 +5,4 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: '/opt/puppet/hieradata'
+  :datadir: '%{::settings::manifestdir}/../hieradata'
