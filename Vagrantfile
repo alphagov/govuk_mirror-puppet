@@ -14,12 +14,10 @@ Vagrant.configure("2") do |config|
   config.vm.box     = "puppet-precise64"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
-  config.vm.synced_folder '.', '/opt/puppet'
-
   config.vm.provision :shell,
-    :inline => 'exec /opt/puppet/tools/bootstrap'
+    :inline => 'cd /vagrant && exec ./tools/bootstrap'
   config.vm.provision :shell,
-    :inline => 'exec /opt/puppet/tools/puppet-apply $@',
+    :inline => 'cd /vagrant && exec ./tools/puppet-apply $@',
     :args   => '--verbose --summarize --environment development'
 
   nodes.each do |node_name, node_opts|

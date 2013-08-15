@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-PUPPET_PATH=/opt/puppet
+PUPPET_PATH=.
 sudo puppet apply \
   --hiera_config ${PUPPET_PATH}/hiera.yaml \
   --manifestdir ${PUPPET_PATH}/manifests \
