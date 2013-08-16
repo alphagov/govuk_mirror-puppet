@@ -15,9 +15,9 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
   config.vm.provision :shell,
-    :inline => 'cd /vagrant && exec ./tools/bootstrap'
+    :inline => 'exec /vagrant/tools/bootstrap'
   config.vm.provision :shell,
-    :inline => 'cd /vagrant && exec ./tools/puppet-apply $@',
+    :inline => 'exec /vagrant/tools/puppet-apply $@',
     :args   => '--verbose --summarize --environment development'
 
   nodes.each do |node_name, node_opts|

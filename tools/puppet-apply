@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-PUPPET_PATH=.
+cd "$(dirname "$0")/.."
 sudo puppet apply \
-  --hiera_config ${PUPPET_PATH}/hiera.yaml \
-  --manifestdir ${PUPPET_PATH}/manifests \
-  --modulepath ${PUPPET_PATH}/modules:${PUPPET_PATH}/vendor/modules \
-  ${PUPPET_PATH}/manifests/site.pp \
+  --hiera_config hiera.yaml \
+  --manifestdir manifests \
+  --modulepath modules:vendor/modules \
+  manifests/site.pp \
   $@
