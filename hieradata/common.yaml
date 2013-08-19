@@ -4,7 +4,8 @@ classes:
   - harden
   - gds_accounts
 
-puppet::ensure: '3.2.3-1puppetlabs1'
+puppet::puppet_ensure: '3.2.3-1puppetlabs1'
+puppet::facter_ensure: '1.7.2-1puppetlabs1'
 
 gds_accounts::accounts:
   annashipman:

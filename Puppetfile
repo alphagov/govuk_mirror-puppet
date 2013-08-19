@@ -1,7 +1,6 @@
 forge 'http://forge.puppetlabs.com/'
 
 mod 'puppetlabs/stdlib', '~> 3.0'
-mod 'rtyler/puppet'
 
 mod 'harden',
   :git => 'git://github.com/alphagov/puppet-harden.git',
@@ -9,3 +8,6 @@ mod 'harden',
 mod 'gds_accounts',
   :git => 'git://github.com/alphagov/puppet-gds_accounts.git',
   :ref => 'v0.0.1'
+mod 'puppet',
+  :git => 'git://github.com/alphagov/puppet-puppet.git',
+  :ref => 'v0.0.2'

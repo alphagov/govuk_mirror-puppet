@@ -1,6 +1,8 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
+    ploperations/puppetlabs_apt (0.0.3)
+      puppetlabs/apt (>= 1.0.0)
     torrancew/account (0.0.5)
 
 FORGE
@@ -9,9 +11,6 @@ FORGE
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
-    rtyler/puppet (0.0.1)
-      puppetlabs/apt (>= 0.0.4)
-      puppetlabs/stdlib (>= 3.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
@@ -29,9 +28,18 @@ GIT
   specs:
     harden (0.0.1)
 
+GIT
+  remote: git://github.com/alphagov/puppet-puppet.git
+  ref: v0.0.2
+  sha: 3cad89bff94b5ab24e63e8790b9be76c0b2ad359
+  specs:
+    puppet (0.0.2)
+      ploperations/puppetlabs_apt (>= 0)
+      puppetlabs/stdlib (>= 3.0.0)
+
 DEPENDENCIES
   gds_accounts (>= 0)
   harden (>= 0)
+  puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
-  rtyler/puppet (>= 0)
 
