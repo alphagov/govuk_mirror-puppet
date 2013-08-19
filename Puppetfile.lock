@@ -8,6 +8,7 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    arnoudj/sudo (1.0.0)
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
@@ -38,6 +39,7 @@ GIT
       puppetlabs/stdlib (>= 3.0.0)
 
 DEPENDENCIES
+  arnoudj/sudo (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
   puppet (>= 0)

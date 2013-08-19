@@ -3,9 +3,16 @@ classes:
   - puppet
   - harden
   - gds_accounts
+  - gds_sudo
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
+
+gds_sudo::sudoers:
+  group_sudo:
+    users: %sudo
+    tags: 
+      - 'NOPASSWD'
 
 gds_accounts::groups:
   - gds
