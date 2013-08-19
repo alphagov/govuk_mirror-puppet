@@ -12,3 +12,6 @@ mod 'gds_accounts',
 mod 'puppet',
   :git => 'git://github.com/alphagov/puppet-puppet.git',
   :ref => 'v0.0.2'
+mod 'ext4mount',
+  :git => 'git://github.com/alphagov/puppet-ext4mount.git',
+  :ref => 'd97f99cc2801b83152b905d1285fa34e689cb499'

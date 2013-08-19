@@ -14,6 +14,13 @@ FORGE
     puppetlabs/stdlib (3.2.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-ext4mount.git
+  ref: d97f99cc2801b83152b905d1285fa34e689cb499
+  sha: d97f99cc2801b83152b905d1285fa34e689cb499
+  specs:
+    ext4mount (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
   ref: v1.0.0
   sha: 4d7cc1f4807e66377abdf96ae35445facfd97c7a
@@ -40,6 +47,7 @@ GIT
 
 DEPENDENCIES
   arnoudj/sudo (>= 0)
+  ext4mount (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
   puppet (>= 0)

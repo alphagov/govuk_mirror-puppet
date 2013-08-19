@@ -5,6 +5,7 @@ classes:
   - gds_accounts
   - gds_sudo
   - packages
+  - mount
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
