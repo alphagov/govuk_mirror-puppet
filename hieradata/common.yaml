@@ -7,6 +7,10 @@ classes:
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
 
+gds_accounts::groups:
+  - gds
+  - sudo
+
 gds_accounts::accounts:
   annashipman:
     comment: Anna Shipman

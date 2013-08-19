@@ -14,10 +14,10 @@ FORGE
 
 GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
-  ref: v0.0.1
-  sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
+  ref: v1.0.0
+  sha: 4d7cc1f4807e66377abdf96ae35445facfd97c7a
   specs:
-    gds_accounts (0.0.1)
+    gds_accounts (1.0.0)
       puppetlabs/stdlib (>= 3.0.0)
       torrancew/account (= 0.0.5)
 
