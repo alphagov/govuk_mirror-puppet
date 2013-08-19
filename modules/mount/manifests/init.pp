@@ -7,7 +7,7 @@ class mount {
   if ($::environment != 'development') {
     ext4mount { '/srv/mirror_data':
       mountoptions => 'defaults',
-      disk         => '/dev/sdb1',
+      disk         => '/dev/mapper/vg0-lv0',
     }
   }
 }
