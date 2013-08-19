@@ -4,9 +4,14 @@ classes:
   - harden
   - gds_accounts
   - gds_sudo
+  - packages
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
+
+packages::package_array:
+  - lvm2
+  - rsync
 
 gds_sudo::sudoers:
   group_sudo:
