@@ -10,7 +10,7 @@ classes:
 nginx::nginx_vhosts:
   govuk_mirror:
     server_name:
-      - 'www.gov.uk'
+      - 'origin.mirror0.govuk.service.gov.uk'
     www_root: '/srv/mirror_data'
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
