@@ -20,6 +20,7 @@ mirror_environment::data_dir: '/srv/mirror_data'
 mirror_environment::package_array:
   - lvm2
   - rsync
+  - curl
 
 gds_sudo::sudoers:
   group_sudo:
