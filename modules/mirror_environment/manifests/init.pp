@@ -8,6 +8,7 @@
 #   Array of packages to install. Defaults to empty array and no action.
 #
 class mirror_environment (
+  $data_dir,
   $package_array = []
 ) {
   if ( $package_array != [] ) {

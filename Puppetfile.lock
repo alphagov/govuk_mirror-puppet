@@ -9,6 +9,8 @@ FORGE
   remote: http://forge.puppetlabs.com/
   specs:
     arnoudj/sudo (1.0.0)
+    jfryman/nginx (0.0.3)
+      puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
@@ -50,6 +52,7 @@ DEPENDENCIES
   ext4mount (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
+  jfryman/nginx (>= 0)
   puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
 

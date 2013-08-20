@@ -2,6 +2,7 @@ forge 'http://forge.puppetlabs.com/'
 
 mod 'puppetlabs/stdlib', '~> 3.0'
 mod 'arnoudj/sudo'
+mod 'jfryman/nginx'
 
 mod 'harden',
   :git => 'git://github.com/alphagov/puppet-harden.git',
