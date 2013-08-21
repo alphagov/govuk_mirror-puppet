@@ -12,6 +12,7 @@
 #
 class mirror_environment (
   $data_dir,
+  $www_roots = [],
   $package_array = []
 ) {
   if ( $package_array != [] ) {
@@ -24,6 +25,18 @@ class mirror_environment (
     ext4mount { $data_dir:
       mountoptions => 'defaults',
       disk         => '/dev/mapper/vg0-lv0',
+      before       => File[$data_dir],
     }
   }
+
+  file { $data_dir:
+    ensure => directory,
+  }
+
+  if ( $www_roots != [] ) {
+    file { $www_roots:
+      ensure => directory,
+    }
+  }
+
 }

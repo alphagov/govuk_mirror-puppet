@@ -17,6 +17,8 @@ puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
 
 mirror_environment::data_dir: '/srv/mirror_data'
+mirror_environment::www_roots:
+  - '/srv/mirror_data/www-origin'
 mirror_environment::package_array:
   - lvm2
   - rsync
