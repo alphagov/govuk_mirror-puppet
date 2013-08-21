@@ -4,6 +4,9 @@
 #
 # === parameters
 #
+# [*data_dir*]
+#   Root directory for the mounted disk
+#
 # [*package_array*]
 #   Array of packages to install. Defaults to empty array and no action.
 #
@@ -18,7 +21,7 @@ class mirror_environment (
   }
 
   if ($::environment != 'development') {
-    ext4mount { '/srv/mirror_data':
+    ext4mount { $data_dir:
       mountoptions => 'defaults',
       disk         => '/dev/mapper/vg0-lv0',
     }
