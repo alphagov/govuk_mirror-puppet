@@ -39,4 +39,8 @@ class mirror_environment (
     }
   }
 
+  ufw::allow { 'allow-ssh':
+    port => '22',
+    ip   => 'any'
+  }
 }
