@@ -6,8 +6,34 @@ classes:
   - puppet
   - ssh::server
   - ufw
+  - gds_sudo
+  - mirror_environment
+  - nginx
 
-puppet::ensure: '3.2.3-1puppetlabs1'
+nginx::nginx_vhosts:
+  govuk_mirror:
+    server_name:
+      - 'origin.mirror0.govuk.service.gov.uk'
+    www_root: '/srv/mirror_data'
+
+puppet::puppet_ensure: '3.2.3-1puppetlabs1'
+puppet::facter_ensure: '1.7.2-1puppetlabs1'
+
+mirror_environment::data_dir: '/srv/mirror_data'
+mirror_environment::package_array:
+  - lvm2
+  - rsync
+  - curl
+
+gds_sudo::sudoers:
+  group_sudo:
+    users: %sudo
+    tags: 
+      - 'NOPASSWD'
+
+gds_accounts::groups:
+  - gds
+  - sudo
 
 gds_accounts::accounts:
   alexmuller:

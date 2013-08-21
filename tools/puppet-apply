@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+cd "$(dirname "$0")/.."
+sudo puppet apply \
+  --hiera_config hiera.yaml \
+  --manifestdir manifests \
+  --modulepath modules:vendor/modules \
+  manifests/site.pp \
+  $@
