@@ -8,7 +8,6 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
-    arnoudj/sudo (1.0.0)
     jfryman/nginx (0.0.3)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/apt (1.2.0)
@@ -47,12 +46,19 @@ GIT
       ploperations/puppetlabs_apt (>= 0)
       puppetlabs/stdlib (>= 3.0.0)
 
+GIT
+  remote: git://github.com/alphagov/puppet-sudo.git
+  ref: 7de29e11573728c9780d28880e16b8d51b8a0245
+  sha: 7de29e11573728c9780d28880e16b8d51b8a0245
+  specs:
+    sudo (1.0.0)
+
 DEPENDENCIES
-  arnoudj/sudo (>= 0)
   ext4mount (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
   jfryman/nginx (>= 0)
   puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
+  sudo (>= 0)
 
