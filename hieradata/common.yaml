@@ -8,10 +8,10 @@ classes:
   - nginx
 
 nginx::nginx_vhosts:
-  govuk_mirror:
+  'www-origin':
     server_name:
-      - 'origin.mirror0.govuk.service.gov.uk'
-    www_root: '/srv/mirror_data'
+      - 'www-origin.mirror.*'
+    www_root: '/srv/mirror_data/www-origin'
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
