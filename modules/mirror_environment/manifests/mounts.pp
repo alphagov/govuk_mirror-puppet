@@ -8,11 +8,15 @@
 # [*data_dir*]
 #   Root directory for the mounted disk
 #
+# [*username*]
+#  Owner of the data directory and sub directories
+#
 # [*www_roots*]
 #   WWW root directories to have their existance ensured
 #
 class mirror_environment::mounts (
   $data_dir,
+  $username,
   $www_roots = [],
 ) {
 
@@ -26,11 +30,13 @@ class mirror_environment::mounts (
 
   file { $data_dir:
     ensure => directory,
+    owner  => $username,
   }
 
   if ( $www_roots != [] ) {
     file { $www_roots:
       ensure => directory,
+      owner  => $username,
     }
   }
 
