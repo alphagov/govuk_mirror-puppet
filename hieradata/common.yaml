@@ -6,6 +6,7 @@ classes:
   - gds_sudo
   - mirror_environment
   - mirror_environment::mounts
+  - mirror_environment::user
   - nginx
 
 nginx::nginx_vhosts:
@@ -20,6 +21,10 @@ puppet::facter_ensure: '1.7.2-1puppetlabs1'
 mirror_environment::mounts::data_dir: '/srv/mirror_data'
 mirror_environment::mounts::www_roots:
   - '/srv/mirror_data/www-origin'
+
+mirror_environment::user::username: 'mirror-rsync'
+mirror_environment::user::ssh_key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw/ksvUhzrUVVbupDXEwz4J2K8Yz515pxhRLpfx6oGruM/hj4wVJ5uPt+4IL5k0sLXxRH0X/VXuK2zBV2fSnPP4cNUZiFrPbN1gea945dGvGIstLMZfsw8Md3jN4i8UXZFBriUfjQT7APLGEsQ+fl+Lzuhpp1nq2oWKem28moAxQkxU2ShPQhP/kzRkTrNbiusOFE4YQN4seZRJEtZ22p+qSVAPVyc2mfJHr6gdVNO3dMBdD7Ud9m3L5AeD7GNA/r2DiJViIplipRMvJJ0w3KkCnTWHiw3C0tXjyAMIH3jXqIJVqUej7Jum3FzixQrFgBR88XkPzlR0qHvR73HBSeZQ=='
+
 mirror_environment::package_array:
   - lvm2
   - rsync
