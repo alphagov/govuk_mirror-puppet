@@ -8,6 +8,7 @@ classes:
   - ufw
   - gds_sudo
   - mirror_environment
+  - mirror_environment::firewall
   - nginx
 
 nginx::nginx_vhosts:
