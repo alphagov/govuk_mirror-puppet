@@ -7,8 +7,12 @@
 # [*package_array*]
 #   Array of packages to install. Defaults to empty array and no action.
 #
+# [*ssl_config*]
+#   A hash of vhost name to ssl $cert and $key.
+#
 class mirror_environment (
-  $package_array = []
+  $package_array = [],
+  $ssl_config = {}
 ) {
 
   if ( $package_array != [] ) {
@@ -16,5 +20,14 @@ class mirror_environment (
       ensure => present,
     }
   }
+
+  file { '/etc/nginx/ssl':
+    ensure => directory,
+    mode   => '0700',
+    purge  => true,
+  }
+
+  validate_hash($ssl_config)
+  create_resources('mirror_environment::nginx_ssl', $ssl_config)
 
 }

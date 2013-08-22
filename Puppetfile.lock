@@ -8,8 +8,6 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
-    jfryman/nginx (0.0.3)
-      puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
@@ -38,6 +36,14 @@ GIT
     harden (0.0.1)
 
 GIT
+  remote: git://github.com/alphagov/puppet-nginx-jfryman.git
+  ref: separate-ssl-files
+  sha: 53c970cfa5c58079edc17b3edf036e786c6ab465
+  specs:
+    nginx (0.0.3)
+      puppetlabs/stdlib (>= 0.1.6)
+
+GIT
   remote: git://github.com/alphagov/puppet-puppet.git
   ref: v0.0.2
   sha: 3cad89bff94b5ab24e63e8790b9be76c0b2ad359
@@ -57,7 +63,7 @@ DEPENDENCIES
   ext4mount (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
-  jfryman/nginx (>= 0)
+  nginx (>= 0)
   puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
   sudo (>= 0)
