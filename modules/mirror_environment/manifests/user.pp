@@ -14,9 +14,8 @@
 class mirror_environment::user (
   $username,
   $ssh_key
-)
-{
-  account{ $username:
+) {
+  account { $username:
     ssh_key => $ssh_key,
     comment => 'Mirror user which rsynchs data',
   }
