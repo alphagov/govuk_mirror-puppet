@@ -17,9 +17,6 @@ FORGE
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
-    rtyler/puppet (0.0.1)
-      puppetlabs/apt (>= 0.0.4)
-      puppetlabs/stdlib (>= 3.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-ext4mount.git
@@ -77,6 +74,5 @@ DEPENDENCIES
   jfryman/nginx (>= 0)
   puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
-  rtyler/puppet (>= 0)
   sudo (>= 0)
 

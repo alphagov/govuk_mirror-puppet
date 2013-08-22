@@ -3,7 +3,6 @@ forge 'http://forge.puppetlabs.com/'
 mod 'attachmentgenie/ufw', '1.1.0'
 mod 'attachmentgenie/ssh', '1.1.1'
 mod 'puppetlabs/stdlib',   '~> 3.0'
-mod 'rtyler/puppet'
 mod 'jfryman/nginx'
 
 mod 'fail2ban',
