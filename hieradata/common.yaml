@@ -7,6 +7,7 @@ classes:
   - nginx
   - mirror_environment
   - mirror_environment::mounts
+  - mirror_environment::user
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
@@ -15,10 +16,6 @@ mirror_environment::package_array:
   - lvm2
   - rsync
   - curl
-
-mirror_environment::mounts::data_dir: '/srv/mirror_data'
-mirror_environment::mounts::www_roots:
-  - '/srv/mirror_data/www-origin'
 
 nginx::server_tokens: 'off'
 nginx::confd_purge: true
@@ -35,6 +32,14 @@ nginx::nginx_vhosts:
     ssl:      true
     ssl_key:  '/etc/nginx/ssl/www-origin.key'
     ssl_cert: '/etc/nginx/ssl/www-origin.cert'
+
+mirror_environment::mounts::data_dir: '/srv/mirror_data'
+mirror_environment::mounts::www_roots:
+  - '/srv/mirror_data/www-origin'
+mirror_environment::mounts::username: 'mirror-rsync'
+
+mirror_environment::user::username: 'mirror-rsync'
+mirror_environment::user::ssh_key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw/ksvUhzrUVVbupDXEwz4J2K8Yz515pxhRLpfx6oGruM/hj4wVJ5uPt+4IL5k0sLXxRH0X/VXuK2zBV2fSnPP4cNUZiFrPbN1gea945dGvGIstLMZfsw8Md3jN4i8UXZFBriUfjQT7APLGEsQ+fl+Lzuhpp1nq2oWKem28moAxQkxU2ShPQhP/kzRkTrNbiusOFE4YQN4seZRJEtZ22p+qSVAPVyc2mfJHr6gdVNO3dMBdD7Ud9m3L5AeD7GNA/r2DiJViIplipRMvJJ0w3KkCnTWHiw3C0tXjyAMIH3jXqIJVqUej7Jum3FzixQrFgBR88XkPzlR0qHvR73HBSeZQ=='
 
 gds_sudo::sudoers:
   group_sudo:
