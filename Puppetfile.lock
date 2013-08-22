@@ -53,9 +53,9 @@ GIT
       puppetlabs/stdlib (>= 3.0.0)
 
 GIT
-  remote: git://github.com/alphagov/puppet-sudo.git
-  ref: 7de29e11573728c9780d28880e16b8d51b8a0245
-  sha: 7de29e11573728c9780d28880e16b8d51b8a0245
+  remote: git://github.com/arnoudj/puppet-sudo.git
+  ref: a445af12ce737aff4fae3da8a42c2e9f08d485a2
+  sha: a445af12ce737aff4fae3da8a42c2e9f08d485a2
   specs:
     sudo (1.0.0)
 
