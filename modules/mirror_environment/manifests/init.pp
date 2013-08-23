@@ -16,5 +16,4 @@ class mirror_environment (
       ensure => present,
     }
   }
-
 }
