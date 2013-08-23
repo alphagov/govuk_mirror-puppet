@@ -36,6 +36,12 @@ nginx::nginx_vhosts:
     ssl:      true
     ssl_key:  '/etc/nginx/ssl/www-origin.key'
     ssl_cert: '/etc/nginx/ssl/www-origin.cert'
+    location_cfg_prepend:
+      error_page: '503 /error/503.html'
+    try_files:
+      - '$uri'
+      - '$uri/'
+      - '=503'
 
 mirror_environment::mounts::data_dir: '/srv/mirror_data'
 mirror_environment::mounts::www_roots:
