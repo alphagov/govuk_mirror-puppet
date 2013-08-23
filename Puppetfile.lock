@@ -12,6 +12,7 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ufw (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
+    blom/rssh (0.0.3)
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
@@ -73,6 +74,7 @@ GIT
 DEPENDENCIES
   attachmentgenie/ssh (= 1.1.1)
   attachmentgenie/ufw (= 1.1.0)
+  blom/rssh (>= 0)
   ext4mount (>= 0)
   fail2ban (>= 0)
   gds_accounts (>= 0)

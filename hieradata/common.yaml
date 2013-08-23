@@ -12,6 +12,7 @@ classes:
   - mirror_environment::firewall
   - mirror_environment::mounts
   - mirror_environment::user
+  - rssh
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
@@ -20,6 +21,9 @@ mirror_environment::package_array:
   - lvm2
   - rsync
   - curl
+
+rssh::users:
+  - 'mirror-rsync:022:100000'
 
 nginx::server_tokens: 'off'
 nginx::confd_purge: true

@@ -18,5 +18,6 @@ class mirror_environment::user (
   account { $username:
     ssh_key => $ssh_key,
     comment => 'Mirror user which rsynchs data',
+    shell   => '/usr/bin/rssh',
   }
 }
