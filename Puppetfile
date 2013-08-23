@@ -1,10 +1,12 @@
 forge 'http://forge.puppetlabs.com/'
 
+mod 'puppetlabs/stdlib', '~> 3.0'
 mod 'attachmentgenie/ufw', '1.1.0'
 mod 'attachmentgenie/ssh', '1.1.1'
-mod 'puppetlabs/stdlib',   '~> 3.0'
-mod 'jfryman/nginx'
 
+mod 'nginx',
+  :git => 'git://github.com/alphagov/puppet-nginx-jfryman.git',
+  :ref => 'separate-ssl-files'
 mod 'fail2ban',
   :git => 'git://github.com/valentinroca/puppet-fail2ban',
   :ref => '201ac7d0f30a118234a7f2edf4be4bd5c99954ce'

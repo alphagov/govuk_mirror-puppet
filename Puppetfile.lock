@@ -12,8 +12,6 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ufw (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
-    jfryman/nginx (0.0.3)
-      puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
@@ -40,6 +38,14 @@ GIT
   sha: 5b27ee25e19f0c5421665246b76a13def8058e1c
   specs:
     harden (0.0.1)
+
+GIT
+  remote: git://github.com/alphagov/puppet-nginx-jfryman.git
+  ref: separate-ssl-files
+  sha: 53c970cfa5c58079edc17b3edf036e786c6ab465
+  specs:
+    nginx (0.0.3)
+      puppetlabs/stdlib (>= 0.1.6)
 
 GIT
   remote: git://github.com/alphagov/puppet-puppet.git
@@ -71,7 +77,7 @@ DEPENDENCIES
   fail2ban (>= 0)
   gds_accounts (>= 0)
   harden (>= 0)
-  jfryman/nginx (>= 0)
+  nginx (>= 0)
   puppet (>= 0)
   puppetlabs/stdlib (~> 3.0)
   sudo (>= 0)
