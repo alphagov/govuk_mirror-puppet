@@ -28,11 +28,6 @@ rssh::users:
 nginx::server_tokens: 'off'
 nginx::confd_purge: true
 nginx::nginx_vhosts:
-  default_server:
-    www_root: '/usr/share/nginx/html'
-    listen_options: 'default_server'
-    location_cfg_prepend:
-      return: '444 "no content"'
   'www-origin':
     server_name:
       - 'www-origin.mirror.*'
