@@ -39,8 +39,9 @@ nginx::nginx_vhosts:
     location_cfg_prepend:
       error_page: '503 /error/503.html'
     try_files:
+      - '$uri/index.html'
+      - '$uri.html'
       - '$uri'
-      - '$uri/'
       - '=503'
 
 mirror_environment::mounts::data_dir: '/srv/mirror_data'
