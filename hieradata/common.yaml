@@ -56,7 +56,7 @@ mirror_environment::user::ssh_key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw/ksvUhzrUVVbupD
 gds_sudo::sudoers:
   group_sudo:
     users: '%sudo'
-    tags: 
+    tags:
       - 'NOPASSWD'
 
 gds_accounts::groups:
