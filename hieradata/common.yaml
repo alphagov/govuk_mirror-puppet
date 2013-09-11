@@ -16,7 +16,7 @@ classes:
 
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
-puppet::cron_command: '/opt/puppet/tools/puppet-apply --environemnt %{environment}'
+puppet::cron_command: '/opt/puppet/tools/puppet-apply --environment %{environment}'
 puppet::cron_ensure: 'present'
 mirror_environment::package_array:
   - lvm2
