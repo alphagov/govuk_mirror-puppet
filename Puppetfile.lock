@@ -50,10 +50,10 @@ GIT
 
 GIT
   remote: git://github.com/alphagov/puppet-puppet.git
-  ref: v0.0.2
-  sha: 3cad89bff94b5ab24e63e8790b9be76c0b2ad359
+  ref: v0.1.0
+  sha: 0739e028da3b50254982400287fe07b7ec375614
   specs:
-    puppet (0.0.2)
+    puppet (0.1.0)
       ploperations/puppetlabs_apt (>= 0)
       puppetlabs/stdlib (>= 3.0.0)
 
