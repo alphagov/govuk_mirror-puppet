@@ -24,3 +24,6 @@ mod 'puppet',
 mod 'ext4mount',
   :git => 'git://github.com/alphagov/puppet-ext4mount.git',
   :ref => 'd97f99cc2801b83152b905d1285fa34e689cb499'
+mod 'clamav',
+  :git => 'git://github.com/alphagov/puppet-clamav.git',
+  :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
