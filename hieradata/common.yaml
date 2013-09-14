@@ -12,6 +12,7 @@ classes:
   - mirror_environment::firewall
   - mirror_environment::mounts
   - mirror_environment::user
+  - mirror_environment::clamdscan
   - rssh
   - clamav
 
