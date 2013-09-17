@@ -5,8 +5,9 @@
 #
 class mirror_environment::clamdscan {
 
-  file { '/etc/apparmor.d/local/usr.sbin.clamd':
-    content => '/srv/** r,',
+  apparmor::profile { 'usr.sbin.clamd':
+    local_only   => true,
+    local_source => 'puppet:///modules/mirror_environment/etc/apparmor.d/local/usr.sbin.clamd',
     }
 
   file { '/srv/infected':

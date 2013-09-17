@@ -19,6 +19,13 @@ FORGE
     puppetlabs/stdlib (3.2.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-apparmor.git
+  ref: fd0106ccd688a8af4b62e57d420a26e80b484731
+  sha: fd0106ccd688a8af4b62e57d420a26e80b484731
+  specs:
+    apparmor (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-clamav.git
   ref: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
   sha: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
@@ -74,6 +81,7 @@ GIT
     fail2ban (1.1.0)
 
 DEPENDENCIES
+  apparmor (>= 0)
   arnoudj/sudo (>= 0)
   attachmentgenie/ssh (= 1.1.1)
   attachmentgenie/ufw (= 1.1.0)

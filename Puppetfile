@@ -27,3 +27,6 @@ mod 'ext4mount',
 mod 'clamav',
   :git => 'git://github.com/alphagov/puppet-clamav.git',
   :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
+mod 'apparmor',
+  :git => 'git://github.com/alphagov/puppet-apparmor.git',
+  :ref => 'fd0106ccd688a8af4b62e57d420a26e80b484731'
