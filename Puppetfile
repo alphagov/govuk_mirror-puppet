@@ -24,3 +24,10 @@ mod 'puppet',
 mod 'ext4mount',
   :git => 'git://github.com/alphagov/puppet-ext4mount.git',
   :ref => 'd97f99cc2801b83152b905d1285fa34e689cb499'
+mod 'clamav',
+  :git => 'git://github.com/alphagov/puppet-clamav.git',
+  :ref => 'v0.0.1'
+mod 'apparmor',
+  # https://github.com/simondeziel/puppet-apparmor/pull/1
+  :git => 'git://github.com/alphagov/puppet-apparmor.git',
+  :ref => 'local_only_profile'
