@@ -1,5 +1,6 @@
 ---
 classes:
+  - apt::unattended_upgrades
   - fail2ban
   - gds_accounts
   - harden
