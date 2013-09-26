@@ -32,7 +32,7 @@ rssh::users:
 nginx::server_tokens: 'off'
 nginx::confd_purge: true
 nginx::http_cfg_append:
-  gzip_vary: on
+  gzip_vary: 'on'
 nginx::nginx_vhosts:
   'www-origin':
     server_name:
