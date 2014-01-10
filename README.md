@@ -1,6 +1,8 @@
 # govuk_mirror-puppet
 
-This repo is a fork of [puppet-skeleton](https://github.com/gds-operations/puppet-skeleton).
+Provisions a GOV.UK mirror, using standalone Puppet (`puppet apply`).
+
+Relies on the [govuk_mirror-deployment](https://github.gds/gds/govuk_mirror-deployment) repository.
 
 ## Development workflow
 
