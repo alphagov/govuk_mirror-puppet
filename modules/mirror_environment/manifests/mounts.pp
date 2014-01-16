@@ -1,11 +1,11 @@
 # == Class: mirror_environment::mounts
 #
-# Configures LVM disks, mounts them and ensures the data_dir and
+# Configures LVM disks, mounts them and ensures the mirror_data and
 # www_roots exist
 #
 # === parameters
 #
-# [*data_dir*]
+# [*mirror_data*]
 #   Root directory for the mounted disk
 #
 # [*username*]
@@ -15,28 +15,28 @@
 #   WWW root directories to have their existance ensured
 #
 class mirror_environment::mounts (
-  $data_dir,
+  $mirror_data,
   $username,
   $www_roots = [],
 ) {
 
   if ($::environment != 'development') {
-    ext4mount { $data_dir:
+    ext4mount { $mirror_data:
       mountoptions => 'defaults',
-      disk         => '/dev/mapper/data-dir',
-      before       => File[$data_dir],
-      require      => Lvm::Volume['data-dir'],
+      disk         => '/dev/mapper/mirror-data',
+      before       => File[$mirror_data],
+      require      => Lvm::Volume['data'],
     }
 
-    lvm::module { 'data-dir':
+    lvm::volume { 'data':
       ensure => present,
       pv     => '/dev/sdb1',
-      vg     => 'data-dir',
+      vg     => 'mirror',
       fstype => 'ext4',
     }
   }
 
-  file { $data_dir:
+  file { $mirror_data:
     ensure => directory,
     owner  => $username,
   }

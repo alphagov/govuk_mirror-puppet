@@ -51,7 +51,7 @@ nginx::nginx_vhosts:
       - '$uri'
       - '=503'
 
-mirror_environment::mounts::data_dir: '/srv/mirror_data'
+mirror_environment::mounts::mirror_data: '/srv/mirror_data'
 mirror_environment::mounts::www_roots:
   - '/srv/mirror_data/www-origin'
 mirror_environment::mounts::username: 'mirror-rsync'
