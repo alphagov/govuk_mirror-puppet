@@ -1,7 +1,7 @@
 # == Class: mirror_environment::mounts
 #
-# Configures mount and ensures the data_dir and www_roots
-# exist
+# Configures LVM disks, mounts them and ensures the data_dir and
+# www_roots exist
 #
 # === parameters
 #
@@ -23,8 +23,16 @@ class mirror_environment::mounts (
   if ($::environment != 'development') {
     ext4mount { $data_dir:
       mountoptions => 'defaults',
-      disk         => '/dev/mapper/vg0-lv0',
+      disk         => '/dev/mapper/data-dir',
       before       => File[$data_dir],
+      require      => Lvm::Volume['data-dir'],
+    }
+
+    lvm::module { 'data-dir':
+      ensure => present,
+      pv     => '/dev/sdb1',
+      vg     => 'data-dir',
+      fstype => 'ext4',
     }
   }
 
