@@ -7,6 +7,8 @@ mod 'attachmentgenie/ufw', '1.1.0'
 mod 'attachmentgenie/ssh', '1.1.1'
 mod 'blom/rssh'
 
+mod 'lvm',
+  :git => 'git://github.com/alphagov/puppetlabs-lvm.git'
 mod 'nginx',
   :git => 'git://github.com/alphagov/puppet-nginx-jfryman.git',
   :ref => 'separate-ssl-files'
