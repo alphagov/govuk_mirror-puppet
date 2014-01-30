@@ -1,5 +1,6 @@
 :hierarchy:
   - "node.%{::clientcert}"
+  - "domain.%{::domain}"
   - "env.%{::environment}"
   - common
 :backends:
