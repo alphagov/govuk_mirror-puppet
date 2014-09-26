@@ -15,6 +15,7 @@ classes:
   - mirror_environment::user
   - mirror_environment::clamdscan
   - mirror_environment::supported_kernel
+  - resolvconf
   - rssh
   - clamav
 
@@ -26,6 +27,10 @@ mirror_environment::package_array:
   - lvm2
   - rsync
   - curl
+
+resolvconf::nameservers:
+  - 195.225.219.131
+  - 195.225.219.163
 
 rssh::users:
   - 'mirror-rsync:022:100000'
