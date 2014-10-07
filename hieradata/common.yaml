@@ -15,6 +15,7 @@ classes:
   - mirror_environment::user
   - mirror_environment::clamdscan
   - mirror_environment::supported_kernel
+  - resolvconf
   - rssh
   - clamav
 
