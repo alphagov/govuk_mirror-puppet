@@ -45,6 +45,7 @@ class mirror_environment (
       ssl                  => true,
       ssl_key              => '/etc/ssl/private/ssl-cert-snakeoil.key',
       ssl_cert             => '/etc/ssl/certs/ssl-cert-snakeoil.pem',
+      ssl_protocols        => 'TLSv1, TLSv1.1, TLSv1.2',
   }
 
 }
