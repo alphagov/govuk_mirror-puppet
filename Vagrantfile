@@ -11,8 +11,8 @@ node_defaults = {
 }
 
 Vagrant.configure("2") do |config|
-  config.vm.box     = "govuk_dev_precise64_20140829"
-  config.vm.box_url = "http://gds-boxes.s3.amazonaws.com/govuk_dev_precise64_20140829.box"
+  config.vm.box     = "govuk_dev_precise64_20141112"
+  config.vm.box_url = "http://gds-boxes.s3.amazonaws.com/govuk_dev_precise64_20141112.box"
 
   config.vm.provision :shell,
     :inline => 'exec /vagrant/tools/bootstrap'
