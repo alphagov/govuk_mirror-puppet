@@ -1,0 +1,5 @@
+---
+# Have cron.daily run at a different time on mirror0 to mirror1 to ensure one
+# mirror node is always up. Remember that cron.daily determines when automatic
+# reboots occur (resulting from unattended-upgrades).
+mirror_environment::cron::daily_minute: 10
