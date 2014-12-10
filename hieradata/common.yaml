@@ -9,6 +9,7 @@ classes:
   - gds_sudo
   - nginx
   - mirror_environment
+  - mirror_environment::cron
   - mirror_environment::fail2ban
   - mirror_environment::firewall
   - mirror_environment::mounts
@@ -19,14 +20,18 @@ classes:
   - rssh
   - clamav
 
+apt::unattended_upgrades::auto_reboot: true
+
 puppet::puppet_ensure: '3.2.3-1puppetlabs1'
 puppet::facter_ensure: '1.7.2-1puppetlabs1'
 puppet::cron_command: '/opt/puppet/tools/puppet-apply --environment %{environment}'
 puppet::cron_ensure: 'present'
+
 mirror_environment::package_array:
   - lvm2
   - rsync
   - curl
+  - update-notifier-common
 
 rssh::users:
   - 'mirror-rsync:022:100000'
