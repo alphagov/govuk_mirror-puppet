@@ -44,7 +44,7 @@ nginx::nginx_vhosts:
   'www-origin':
     server_name:
       - 'www-origin.mirror.*'
-    www_root: '/srv/mirror_data/www-origin'
+    www_root: '/srv/mirror_data/www.gov.uk'
     listen_port: 443
     ssl:      true
     ssl_key:  '/etc/nginx/ssl/www-origin.key'
