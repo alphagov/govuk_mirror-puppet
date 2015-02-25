@@ -2,7 +2,7 @@
 #
 # Configures LVM disks and mounts them
 #
-# === parameters
+# === Parameters
 #
 # [*mirror_data*]
 #   Root directory for the mounted disk
