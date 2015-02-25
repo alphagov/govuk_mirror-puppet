@@ -78,8 +78,6 @@ nginx::nginx_vhosts:
 mirror_environment::supported_kernel::hwe_ver: 'trusty'
 
 mirror_environment::mounts::mirror_data: '/srv/mirror_data'
-mirror_environment::mounts::www_roots:
-  - '/srv/mirror_data/www-origin'
 mirror_environment::mounts::username: 'mirror-rsync'
 
 mirror_environment::user::username: 'mirror-rsync'

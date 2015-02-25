@@ -1,7 +1,6 @@
 # == Class: mirror_environment::mounts
 #
-# Configures LVM disks, mounts them and ensures the mirror_data and
-# www_roots exist
+# Configures LVM disks and mounts them
 #
 # === parameters
 #
@@ -11,13 +10,9 @@
 # [*username*]
 #  Owner of the data directory and sub directories
 #
-# [*www_roots*]
-#   WWW root directories to have their existance ensured
-#
 class mirror_environment::mounts (
   $mirror_data,
   $username,
-  $www_roots = [],
 ) {
 
   if ($::environment != 'development') {
@@ -40,12 +35,4 @@ class mirror_environment::mounts (
     ensure => directory,
     owner  => $username,
   }
-
-  if ( $www_roots != [] ) {
-    file { $www_roots:
-      ensure => directory,
-      owner  => $username,
-    }
-  }
-
 }
