@@ -44,11 +44,11 @@ nginx::nginx_vhosts:
   'www-origin':
     server_name:
       - 'www-origin.mirror.*'
-    www_root: '/srv/mirror_data/www-origin'
+    www_root: '/srv/mirror_data/www.gov.uk'
     listen_port: 443
     ssl:      true
-    ssl_key:  '/etc/nginx/ssl/www-origin.key'
-    ssl_cert: '/etc/nginx/ssl/www-origin.cert'
+    ssl_key:  '/etc/nginx/ssl/mirror.key'
+    ssl_cert: '/etc/nginx/ssl/mirror.cert'
     ssl_protocols: 'TLSv1 TLSv1.1 TLSv1.2'
     location_cfg_prepend:
       expires: '15m'
@@ -59,12 +59,25 @@ nginx::nginx_vhosts:
       - '$uri.html'
       - '$uri'
       - '=503'
+  'assets-origin':
+    server_name:
+      - 'assets-origin.mirror.*'
+    www_root: '/srv/mirror_data/assets.digital.cabinet-office.gov.uk'
+    listen_port: 443
+    ssl:  true
+    ssl_key: '/etc/nginx/ssl/mirror.key'
+    ssl_cert: '/etc/nginx/ssl/mirror.cert'
+    ssl_protocols: 'TLSv1 TLSv1.1 TLSv1.2'
+    location_cfg_prepend:
+      expires: '15m'
+      error_page: '403 500 503 504 =503 /error/503.html'
+    try_files:
+      - '$uri'
+      - '=503'
 
 mirror_environment::supported_kernel::hwe_ver: 'trusty'
 
 mirror_environment::mounts::mirror_data: '/srv/mirror_data'
-mirror_environment::mounts::www_roots:
-  - '/srv/mirror_data/www-origin'
 mirror_environment::mounts::username: 'mirror-rsync'
 
 mirror_environment::user::username: 'mirror-rsync'

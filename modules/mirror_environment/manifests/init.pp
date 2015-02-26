@@ -30,6 +30,14 @@ class mirror_environment (
   validate_hash($ssl_config)
   create_resources('mirror_environment::nginx_ssl', $ssl_config)
 
+  # FIXME Remove once deployed
+  exec { 'Rename wildcard SSL certificate':
+    command => 'mv /etc/nginx/ssl/{www-origin,mirror}.cert;
+      mv /etc/nginx/ssl/{www-origin,mirror}.key',
+    onlyif  => 'test -f /etc/nginx/ssl/www-origin.cert',
+    before  => Class['nginx'],
+  }
+
   package{ 'ssl-cert':
     ensure => present,
   } ->
