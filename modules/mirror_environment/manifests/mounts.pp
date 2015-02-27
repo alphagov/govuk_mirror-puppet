@@ -20,7 +20,7 @@ class mirror_environment::mounts (
       mountoptions => 'defaults',
       disk         => '/dev/mapper/mirror-data',
       before       => File[$mirror_data],
-      require      => [Lvm::Volume['data'], File[$mirror_data]],
+      require      => Lvm::Volume['data'],
     }
 
     lvm::volume { 'data':
