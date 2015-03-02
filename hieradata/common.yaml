@@ -75,6 +75,16 @@ nginx::nginx_vhosts:
       - '$uri'
       - '=503'
 
+nginx::nginx_locations:
+  'canary':
+    vhost: 'assets-origin'
+    priority: 900
+    location: /__canary__
+    location_custom_cfg:
+      - 'default_type text/plain'
+      - 'add_header cache-control "max-age=0, no-store, no-cache"'
+      - 'return 200 "OK\n"'
+
 mirror_environment::supported_kernel::hwe_ver: 'trusty'
 
 mirror_environment::mounts::mirror_data: '/srv/mirror_data'
