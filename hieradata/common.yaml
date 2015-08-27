@@ -1,6 +1,7 @@
 ---
 classes:
   - apt::unattended_upgrades
+  - govuk_apt::unused_kernels
   - gds_accounts
   - harden
   - puppet
