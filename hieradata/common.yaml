@@ -84,7 +84,7 @@ nginx::nginx_locations:
     location_custom_cfg:
       - 'default_type text/plain'
       - 'add_header cache-control "max-age=0, no-store, no-cache"'
-      - 'return 200 "OK\n"'
+      - 'return 200 "Mirror OK\n"'
 
 mirror_environment::supported_kernel::hwe_ver: 'trusty'
 
