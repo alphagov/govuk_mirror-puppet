@@ -7,6 +7,7 @@ mod 'attachmentgenie/ufw', '1.1.0'
 mod 'attachmentgenie/ssh', '1.1.1'
 mod 'blom/rssh'
 mod 'gdsoperations/resolvconf'
+mod 'pdxcat/nrpe'
 
 mod 'lvm',
   :git => 'git://github.com/alphagov/puppetlabs-lvm.git'

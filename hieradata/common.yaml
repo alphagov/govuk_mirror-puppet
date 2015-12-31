@@ -17,9 +17,11 @@ classes:
   - mirror_environment::user
   - mirror_environment::clamdscan
   - mirror_environment::supported_kernel
+  - mirror_environment::nrpe
   - resolvconf
   - rssh
   - clamav
+  - nrpe
 
 apt::unattended_upgrades::auto_reboot: true
 
