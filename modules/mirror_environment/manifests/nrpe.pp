@@ -9,4 +9,10 @@ class mirror_environment::nrpe {
     ensure  => present,
     command => 'check_disk -w 10% -c 5%',
   }
+
+  nrpe::command {'check_disk_mirror-data':
+    ensure  => present,
+    command => 'check_disk -w 10% -c 5% /srv/mirror_data',
+  }
+
 }
