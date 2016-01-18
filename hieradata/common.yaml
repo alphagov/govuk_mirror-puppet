@@ -88,6 +88,10 @@ nginx::nginx_locations:
       - 'add_header cache-control "max-age=0, no-store, no-cache"'
       - 'return 200 "Mirror OK\n"'
 
+nrpe::allowed_hosts:
+  - 127.0.0.1
+  - 31.210.245.86
+
 mirror_environment::supported_kernel::hwe_ver: 'trusty'
 
 mirror_environment::mounts::mirror_data: '/srv/mirror_data'
