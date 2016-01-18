@@ -5,8 +5,8 @@
 
 class mirror_environment::nrpe{
 
-    nrpe::command {'check_disk':
-        ensure  => present,
-        command => 'check_disk -w 10% -c 5%',
-    }
+  nrpe::command {'check_disk':
+    ensure  => present,
+    command => 'check_disk -w 10% -c 5%',
+  }
 }
