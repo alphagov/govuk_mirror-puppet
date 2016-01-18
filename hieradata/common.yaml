@@ -149,3 +149,6 @@ ufw::allows:
   https:
     port: 443
     ip: any
+  nrpe:
+    port: 5666
+    ip: any
