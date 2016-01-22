@@ -1,26 +1,25 @@
 ---
 classes:
   - apt::unattended_upgrades
-  - govuk_apt::unused_kernels
+  - clamav
   - gds_accounts
-  - harden
-  - puppet
-  - ssh::server
-  - ufw
   - gds_sudo
-  - nginx
+  - govuk_apt::unused_kernels
+  - harden
   - mirror_environment
+  - mirror_environment::clamdscan
   - mirror_environment::cron
   - mirror_environment::fail2ban
   - mirror_environment::mounts
-  - mirror_environment::user
-  - mirror_environment::clamdscan
-  - mirror_environment::supported_kernel
   - mirror_environment::nrpe
+  - mirror_environment::supported_kernel
+  - mirror_environment::user
+  - nginx
+  - nrpe
+  - puppet
   - resolvconf
   - rssh
-  - clamav
-  - nrpe
+  - ssh::server
   - ufw
 
 apt::unattended_upgrades::auto_reboot: true
