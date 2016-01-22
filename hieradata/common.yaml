@@ -21,6 +21,7 @@ classes:
   - resolvconf
   - rssh
   - ssh::server
+  - ufw
 
 apt::unattended_upgrades::auto_reboot: true
 
