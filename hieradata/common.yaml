@@ -9,7 +9,6 @@ classes:
   - mirror_environment
   - mirror_environment::clamdscan
   - mirror_environment::cron
-  - mirror_environment::fail2ban
   - mirror_environment::firewall
   - mirror_environment::mounts
   - mirror_environment::nrpe

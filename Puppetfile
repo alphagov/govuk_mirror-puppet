@@ -14,9 +14,6 @@ mod 'lvm',
 mod 'nginx',
   :git => 'git://github.com/alphagov/puppet-nginx-jfryman.git',
   :ref => 'separate-ssl-files'
-mod 'fail2ban',
-  :git => 'git://github.com/valentinroca/puppet-fail2ban',
-  :ref => '201ac7d0f30a118234a7f2edf4be4bd5c99954ce'
 mod 'gds_accounts',
   :git => 'git://github.com/alphagov/puppet-gds_accounts.git',
   :ref => 'v1.0.0'
