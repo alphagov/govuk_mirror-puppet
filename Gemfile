@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 # Puppet core.
 gem 'puppet', ENV['PUPPET_VERSION'] || '~> 3.1.0'
-gem 'facter', ENV['FACTER_VERSION'] || '~> 1.6.0'
+gem 'facter', '1.7.5'
 
 # Dependency management.
 gem 'librarian-puppet-maestrodev'
