@@ -86,6 +86,19 @@ nginx::nginx_locations:
       - 'default_type text/plain'
       - 'add_header cache-control "max-age=0, no-store, no-cache"'
       - 'return 200 "Mirror OK\n"'
+  'error-www':
+    vhost: 'www-origin'
+    priority: 900
+    location: '= /error/503.html'
+    location_custom_cfg:
+      - 'root /srv/mirror_data'
+  'error-assets':
+    vhost: 'assets-origin'
+    priority: 900
+    location: '= /error/503.html'
+    location_custom_cfg:
+      - 'root /srv/mirror_data'
+
 
 nrpe::allowed_hosts:
   - 127.0.0.1
