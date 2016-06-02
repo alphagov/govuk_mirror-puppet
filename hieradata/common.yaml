@@ -109,7 +109,7 @@ mirror_environment::supported_kernel::hwe_ver: 'trusty'
 mirror_environment::mounts::mirror_data: '/srv/mirror_data'
 mirror_environment::mounts::username: 'mirror-rsync'
 
-mirror_environment::nrpe::mirror_data_mountpoint: "%{hiera('mirror_environment::mounts::mirror_data')}"
+mirror_environment::nrpe::mirror_data_mountpoint: '/srv/mirror_data'
 
 mirror_environment::user::username: 'mirror-rsync'
 mirror_environment::user::ssh_key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw/ksvUhzrUVVbupDXEwz4J2K8Yz515pxhRLpfx6oGruM/hj4wVJ5uPt+4IL5k0sLXxRH0X/VXuK2zBV2fSnPP4cNUZiFrPbN1gea945dGvGIstLMZfsw8Md3jN4i8UXZFBriUfjQT7APLGEsQ+fl+Lzuhpp1nq2oWKem28moAxQkxU2ShPQhP/kzRkTrNbiusOFE4YQN4seZRJEtZ22p+qSVAPVyc2mfJHr6gdVNO3dMBdD7Ud9m3L5AeD7GNA/r2DiJViIplipRMvJJ0w3KkCnTWHiw3C0tXjyAMIH3jXqIJVqUej7Jum3FzixQrFgBR88XkPzlR0qHvR73HBSeZQ=='
