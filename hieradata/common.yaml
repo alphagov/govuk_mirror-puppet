@@ -64,7 +64,7 @@ nginx::nginx_vhosts:
   'assets-origin':
     server_name:
       - 'assets-origin.mirror.*'
-    www_root: '/srv/mirror_data/assets.digital.cabinet-office.gov.uk'
+    www_root: '/srv/mirror_data/assets.publishing.service.gov.uk'
     listen_port: 443
     ssl:  true
     ssl_key: '/etc/nginx/ssl/mirror.key'
