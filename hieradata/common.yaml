@@ -52,8 +52,6 @@ nginx::nginx_vhosts:
     ssl_key:  '/etc/nginx/ssl/mirror.key'
     ssl_cert: '/etc/nginx/ssl/mirror.cert'
     ssl_protocols: 'TLSv1 TLSv1.1 TLSv1.2'
-    if_block:
-      if: ($args) { return 503 /error/503.html; }
     location_cfg_prepend:
       expires: '15m'
       error_page: '403 500 503 504 =503 /error/503.html'
@@ -72,8 +70,6 @@ nginx::nginx_vhosts:
     ssl_key: '/etc/nginx/ssl/mirror.key'
     ssl_cert: '/etc/nginx/ssl/mirror.cert'
     ssl_protocols: 'TLSv1 TLSv1.1 TLSv1.2'
-    if_block:
-      if: ($args) { return 503 /error/503.html; }
     location_cfg_prepend:
       expires: '15m'
       error_page: '403 500 503 504 =503 /error/503.html'
