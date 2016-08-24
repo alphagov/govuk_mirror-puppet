@@ -98,18 +98,6 @@ nginx::nginx_locations:
     location: '= /error/503.html'
     location_custom_cfg:
       - 'root /srv/mirror_data'
-  'query-string-assets':
-    vhost: 'assets-origin'
-    priority: 900
-    location: '~ \?+'
-    location_custom_cfg:
-      - 'return 503 /error/503.html'
-  'query-string-www':
-    vhost: 'www-origin'
-    priority: 900
-    location: '~ \?+'
-    location_custom_cfg:
-      - 'return 503 /error/503.html'
 
 nrpe::allowed_hosts:
   - 127.0.0.1
