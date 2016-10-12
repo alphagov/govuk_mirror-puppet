@@ -27,6 +27,12 @@ class mirror_environment (
     purge  => true,
   }
 
+  file { '/etc/puppet/puppet.conf':
+    ensure => present,
+    mode   => '0644',
+    source => 'puppet:///modules/mirror_environment/etc/puppet/puppet.conf',
+  }
+
   validate_hash($ssl_config)
   create_resources('mirror_environment::nginx_ssl', $ssl_config)
 
