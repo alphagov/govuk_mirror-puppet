@@ -2,7 +2,7 @@
 
 Provisions a GOV.UK mirror, using standalone Puppet (`puppet apply`).
 
-Relies on the [govuk_mirror-deployment](https://github.gds/gds/govuk_mirror-deployment) repository.
+Relies on the [govuk_mirror-deployment](https://github.com/alphagov/govuk_mirror-deployment) repository.
 
 ## Development workflow
 
