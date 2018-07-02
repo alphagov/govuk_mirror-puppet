@@ -30,4 +30,4 @@ mod 'clamav',
   :git => 'git://github.com/alphagov/puppet-clamav.git',
   :ref => 'v0.0.1'
 mod 'apparmor',
-  :git => 'git://github.com/alphagov/puppet-apparmor.git'
+  :git => 'git://github.com/simondeziel/puppet-apparmor.git'
