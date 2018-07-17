@@ -47,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   facter (= 1.7.5)
+  json_pure (~> 1.8.0)
   librarian-puppet-maestrodev
   puppet (~> 3.1.0)
   puppet-lint (~> 0.3.0)
@@ -54,3 +55,6 @@ DEPENDENCIES
   puppetlabs_spec_helper (~> 0.4.0)
   rake
   rspec-puppet (~> 0.1.0)
+
+BUNDLED WITH
+   1.16.2

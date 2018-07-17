@@ -22,13 +22,6 @@ FORGE
     puppetlabs/stdlib (3.2.0)
 
 GIT
-  remote: git://github.com/alphagov/puppet-apparmor.git
-  ref: master
-  sha: fd0106ccd688a8af4b62e57d420a26e80b484731
-  specs:
-    apparmor (0.0.1)
-
-GIT
   remote: git://github.com/alphagov/puppet-clamav.git
   ref: v0.0.1
   sha: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
@@ -82,6 +75,13 @@ GIT
   sha: 2082a276093c96e67a676f0c6076c0841f918a17
   specs:
     lvm (0.1.2)
+
+GIT
+  remote: git://github.com/simondeziel/puppet-apparmor.git
+  ref: master
+  sha: 81980c95cace83f003586525453c2010eea05d7c
+  specs:
+    apparmor (0.0.1)
 
 DEPENDENCIES
   apparmor (>= 0)
