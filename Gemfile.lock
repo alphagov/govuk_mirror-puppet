@@ -53,8 +53,8 @@ DEPENDENCIES
   puppet-lint (~> 0.3.0)
   puppet-syntax
   puppetlabs_spec_helper (~> 0.4.0)
-  rake
+  rake (~> 10)
   rspec-puppet (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.2
+   1.16.3

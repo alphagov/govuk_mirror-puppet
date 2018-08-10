@@ -12,7 +12,7 @@ gem 'facter', '1.7.5'
 gem 'librarian-puppet-maestrodev'
 
 # Testing utilities.
-gem 'rake'
+gem 'rake', '~> 10'
 gem 'puppet-syntax'
 gem 'puppet-lint', '~> 0.3.0'
 gem 'rspec-puppet', '~> 0.1.0'
